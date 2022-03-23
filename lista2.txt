@@ -1,0 +1,102 @@
+n1 = int(input("Lado 1: "))
+n2 = int(input("Lado 2: "))
+n3 = int(input("Lado 3: "))
+
+if n1 > n2 + n3 and n2 > n1 + n3 and n3 > n1 + n2:
+	print ("Não pode ser um triangulo")
+elif n1 == n2 == n3:
+	print ("Equilatero")
+elif n1 == n2 and n1 == n3 and n2 == n3:
+	print ("Isósceles")
+else:
+	print ("Escaleno")
+
+
+ano = int(input('Digite um ano: '))
+
+if ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0):
+    print('É ano bissexto')
+
+else:
+    print('Não é ano bissexto')
+
+
+peso = float(input('digite o peso da pesaca'))
+
+if peso > 50:
+    execesso = peso - 50
+    multa = execesso * 4
+    print(f'Multado R$ %.2f' % (multa))
+
+else:
+    print('Sem multa a pagar')
+
+
+n1 = int(input('Primeiro número'))
+n2 = int(input('Segundo número'))
+n3 = int(input('Terceiro número'))
+
+maior = n1
+
+if maior < n2:
+    maior = n2
+
+if maior < n3:
+    maior = n3
+
+print('O maior número é %d' %maior)
+
+
+n1 = int(input('Primeiro número'))
+n2 = int(input('Segundo número'))
+n3 = int(input('Terceiro número'))
+
+maior = n1
+menor = n1
+
+if maior < n2:
+    maior = n2
+
+if maior < n3:
+    maior = n3
+
+if menor > n2:
+    menor = n2
+
+if menor > n3:
+    menor = n3
+
+print('Maior: %d ' %maior)
+print ('Menor: %d ' %menor)
+
+
+val_hora = float(input('Digite o quanto ganha por hora: '))
+hora_mes = int(input('Digite a quantidade de horas trabalhadas no mês: '))
+
+salario_bruto = val_hora * hora_mes
+
+desc_ir = salario_bruto * 0.11
+dsc_inss = salario_bruto * 0.08
+des_sind = salario_bruto * 0.05
+salario_liquido = salario_bruto - desc_ir - dsc_inss - des_sind
+
+print('Salario Bruto: R$ %.2f' % salario_bruto)
+print('Desconto IR: R$ %.2f' % desc_ir)
+print('Desconto INSS: R$ %.2f' % dsc_inss)
+print('Desconto Sindicato: R$ %.2f' %des_sind)
+print('Salario Líquido: R$ %.2f' % salario_liquido)
+
+
+tam = int(input('Digite o Tamanho em m2 a ser pintado'))
+
+if tam % 54 == 0:
+    latas = tam / 54
+
+else:
+    latas = int(tam / 54) + 1
+
+valor = latas * 80
+print('São necessárias %d lastas(s), que custa(m) R$ %.2f' % (latas, valor))
+
+
+
